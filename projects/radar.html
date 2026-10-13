@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arduino Mini Radar | Eric Ho</title>
+  <meta name="description" content="Building and modifying an Arduino mini radar system with sensor sweeping, servo control and real-time visualization.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Eric Ho</a>
+    <nav>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="project-hero">
+    <a class="back" href="../index.html#projects">← All projects</a>
+    <h1>Arduino Mini Radar System</h1>
+    <div class="meta" style="color:var(--muted)">September 2026 – Present</div>
+    <div class="tags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Embedded Systems</span><span class="tag">Servo Control</span><span class="tag">Git</span></div>
+
+    <!-- ===== LINKS =====
+         Paste your LinkedIn post URL into the first href.
+         (On LinkedIn: open your post → "..." → "Copy link to post")
+         Paste your GitHub repo URL into the second href. -->
+    <div class="links" style="margin-top:14px">
+      <a class="btn primary" href="PASTE_LINKEDIN_POST_URL_HERE" target="_blank" rel="noopener">View LinkedIn post</a>
+      <a class="btn" href="https://github.com/ericho235" target="_blank" rel="noopener">Source code</a>
+    </div>
+  </div>
+
+  <!-- ===== DEMO VIDEO =====
+       Pick ONE option and delete the placeholder div below it.
+
+       Option A: YouTube (best for long videos, no file size limit)
+         Upload the video to YouTube (Unlisted is fine), click Share → Embed,
+         copy the ID from the URL (the part after /embed/), and use:
+         <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Radar demo" allowfullscreen></iframe></div>
+
+       Option B: video file in your repo (keep it under ~50 MB)
+         Put radar-demo.mp4 in the assets folder, then use:
+         <video src="../assets/radar-demo.mp4" controls muted playsinline></video>
+  -->
+  <section class="prose">
+    <h2>Demo</h2>
+    <div class="media-placeholder"><div>Demo video goes here<br><small>See the instructions in the HTML comment above</small></div></div>
+  </section>
+
+  <section class="prose">
+    <h2>Overview</h2>
+    <p>I built a LAFVIN LA048 Arduino Mini Radar Kit to get hands-on experience with embedded electronics. A distance sensor mounted on a servo sweeps back and forth, and the Arduino reads a distance at each angle and streams the data to my computer, where it's drawn as a live radar display.</p>
+    <p>After getting the stock kit working, I started modifying it to better understand how hardware and software work together.</p>
+  </section>
+
+  <section class="prose">
+    <h2>How it works</h2>
+    <ul>
+      <li><strong>Sensing:</strong> the sensor measures the distance to the nearest object in front of it.</li>
+      <li><strong>Sweeping:</strong> a servo rotates the sensor through its range, one angle step at a time.</li>
+      <li><strong>Microcontroller:</strong> the Arduino moves the servo, takes a reading at each angle and sends <code>angle, distance</code> pairs over USB serial.</li>
+      <li><strong>Visualization:</strong> a program on the PC reads the serial data and draws detected objects on a radar-style display in real time.</li>
+    </ul>
+    <p class="todo">Fill in the exact parts: which sensor (e.g. ultrasonic HC-SR04), which servo, which Arduino board, and what you used for the display (Processing, Python, etc.). A wiring photo or diagram here helps a lot.</p>
+  </section>
+
+  <section class="prose">
+    <h2>My modifications</h2>
+    <p class="todo">Describe each change you made to the stock kit and why. For example: changing the sweep speed or angle range, filtering noisy readings, rewriting the display in Python, adding a buzzer or LED for close objects. Before/after screenshots work well here.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Challenges</h2>
+    <p class="todo">What didn't work at first and how you fixed it, e.g. jittery or false readings, servo twitching, serial data getting out of sync, display lag.</p>
+  </section>
+
+  <section class="prose">
+    <h2>What I learned</h2>
+    <ul>
+      <li>Reading sensors and controlling servos from a microcontroller</li>
+      <li>Sending data from an Arduino to a PC over serial and visualizing it in real time</li>
+      <li>How hardware timing and software timing affect each other</li>
+    </ul>
+    <p class="todo">Add anything specific you learned while building or modifying it.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Next steps</h2>
+    <p class="todo">What you plan to add next.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Eric Ho</div></footer>
+</body>
+</html>
