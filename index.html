@@ -12,137 +12,234 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Eric Ho</a>
+    <a class="brand" href="#top"><span class="dot"></span>Eric Ho</a>
     <nav>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#clubs">Clubs</a>
-      <a href="#skills">Skills</a>
+      <a href="#education">Education &amp; Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main id="top" class="wrap">
+<main id="top">
 
-  <div class="hero">
-    <p class="eyebrow">Electrical Engineering · Arizona State University</p>
-    <h1>Hi, I'm Eric.</h1>
-    <p class="lead">I'm an EE student who likes building things that move. I work on embedded systems, robotics and hardware–software integration, and right now I'm building a robot that plays osu!.</p>
-    <div class="links">
-      <a class="btn primary" href="Eric_Ho_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      <a class="btn" href="https://github.com/ericho235" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" href="https://linkedin.com/in/erh0" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="mailto:ericho2@asu.edu">Email</a>
+  <!-- ================= HERO ================= -->
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="hello">// hello, I'm</p>
+        <h1><span class="grad">Eric Ho</span></h1>
+        <p class="role">I'm <span class="typed" id="typed">an Electrical Engineering student</span></p>
+        <p class="lead">I study EE at Arizona State University and love building things that move. I work on embedded systems, robotics and hardware–software integration, and right now I'm building a robot that plays osu!.</p>
+        <div class="links">
+          <a class="btn primary" href="Eric_Ho_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+          <a class="btn" href="https://github.com/ericho235" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/eric-ho-8888b2319" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:ericho2@asu.edu">Email</a>
+        </div>
+      </div>
+
+      <!-- Your photo: save a square-ish photo as assets/profile.jpg
+           Until then, your initials show instead. -->
+      <div class="photo-wrap">
+        <img class="photo" src="assets/profile.jpg" alt="Eric Ho"
+             onerror="this.outerHTML='<div class=&quot;photo-fallback&quot;>EH</div>'">
+        <div class="status"><span class="live"></span>Building an osu! robot</div>
+      </div>
     </div>
   </div>
 
+  <!-- ================= QUICK FACTS STRIP ================= -->
+  <div class="strip">
+    <div class="wrap">
+      <span><b>study</b>EE @ Arizona State</span>
+      <span><b>building</b>osu! robot</span>
+      <span><b>team</b>ASU Formula SAE Electric</span>
+      <span><b>based</b>Tempe, AZ</span>
+    </div>
+  </div>
+
+  <!-- ================= PROJECTS ================= -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <article class="card featured">
-        <h3>osu! Robot (WIP)</h3>
-        <div class="meta">October 2026 – Present</div>
-        <div class="tags"><span class="tag">Teensy 4.0</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">PlatformIO</span><span class="tag">Git</span></div>
-        <p>An electromechanical robot that plays the rhythm game osu! by pressing keys on a Hall-effect keypad with solenoids.</p>
-        <a class="more" href="projects/osu-robot.html">Read the build →</a>
-      </article>
-      <article class="card">
-        <h3>Arduino Mini Radar System</h3>
-        <div class="meta">September 2026 – Present</div>
-        <div class="tags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Embedded</span><span class="tag">Git</span></div>
-        <p>Built and am modifying a LAFVIN LA048 radar kit, working with sensors, servo control and real-time data visualization.</p>
-        <a class="more" href="projects/radar.html">Read more →</a>
-      </article>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">01 / projects</p>
+        <h2>Things I'm Building</h2>
+        <p>Hands-on hardware projects where I design circuits, write firmware and make the two work together.</p>
+      </div>
+
+      <div class="projects">
+        <a class="pcard" href="projects/osu-robot.html">
+          <div class="thumb">
+            <!-- Swap this SVG for a real photo: <img src="assets/osu-thumb.jpg" alt="osu! robot"> -->
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ea580c"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs>
+              <circle cx="250" cy="52" r="26" fill="none" stroke="#ff66aa" stroke-width="4"/>
+              <circle cx="250" cy="52" r="38" fill="none" stroke="#ff66aa" stroke-width="2" opacity=".4"/>
+              <circle cx="210" cy="100" r="16" fill="none" stroke="#7aa2ff" stroke-width="3" opacity=".7"/>
+              <g fill="#2a2f3a" stroke="#4b5263" stroke-width="2">
+                <rect x="60" y="34" width="22" height="46" rx="4"/><rect x="104" y="34" width="22" height="46" rx="4"/><rect x="148" y="34" width="22" height="46" rx="4"/>
+              </g>
+              <g stroke="url(#g1)" stroke-width="5" stroke-linecap="round"><line x1="71" y1="80" x2="71" y2="104"/><line x1="115" y1="80" x2="115" y2="112"/><line x1="159" y1="80" x2="159" y2="104"/></g>
+              <rect x="40" y="114" width="150" height="40" rx="10" fill="#1b1f27" stroke="#4b5263" stroke-width="2"/>
+              <g fill="#e5e7eb"><rect x="56" y="122" width="30" height="24" rx="5"/><rect x="100" y="126" width="30" height="20" rx="5" fill="url(#g1)"/><rect x="144" y="122" width="30" height="24" rx="5"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="badge">FEATURED</span>
+            <h3>osu! Robot</h3>
+            <div class="meta">October 2026 – Present</div>
+            <p>An electromechanical robot that plays the rhythm game osu! by pressing keys on a Hall-effect keypad with solenoids, driven by a Teensy 4.0 and MOSFET driver circuits.</p>
+            <div class="tags"><span class="tag">Teensy 4.0</span><span class="tag">C++</span><span class="tag">Python</span><span class="tag">PlatformIO</span><span class="tag">Git</span></div>
+            <span class="more">Read the build →</span>
+          </div>
+        </a>
+
+        <a class="pcard" href="projects/radar.html">
+          <div class="thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <g fill="none" stroke="#2f8f5b" stroke-width="1.5">
+                <path d="M40 160 A120 120 0 0 1 280 160"/><path d="M70 160 A90 90 0 0 1 250 160"/><path d="M100 160 A60 60 0 0 1 220 160"/><path d="M130 160 A30 30 0 0 1 190 160"/>
+                <line x1="40" y1="160" x2="280" y2="160"/><line x1="160" y1="160" x2="160" y2="40"/><line x1="160" y1="160" x2="75" y2="75"/><line x1="160" y1="160" x2="245" y2="75"/>
+              </g>
+              <path d="M160 160 L254 85 A120 120 0 0 0 236 68 Z" fill="#3ddc84" opacity=".25"/>
+              <line x1="160" y1="160" x2="254" y2="85" stroke="#3ddc84" stroke-width="2.5"/>
+              <circle cx="218" cy="104" r="5" fill="#ff5a4e"/><circle cx="112" cy="112" r="4" fill="#ff5a4e" opacity=".6"/>
+            </svg>
+          </div>
+          <div class="body">
+            <h3>Arduino Mini Radar</h3>
+            <div class="meta">September 2026 – Present</div>
+            <p>A sweeping sensor radar with servo control and a live visualization, which I'm modifying to learn hardware–software integration.</p>
+            <div class="tags"><span class="tag blue">Arduino</span><span class="tag blue">Python</span><span class="tag blue">Embedded</span><span class="tag blue">Git</span></div>
+            <span class="more">Read more →</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="item">
-      <div class="item-head"><h3>CTE IT Intern</h3><span class="meta">January 2026 – May 2026</span></div>
-      <div class="sub">Peoria Unified School District · Peoria, AZ</div>
-      <ul>
-        <li>Set up, imaged and deployed laptops, desktops and Chromebooks, including OS installs, software setup and user account configuration</li>
-        <li>Helped maintain network infrastructure by fixing connection problems, managing cabling and setting up printers and peripherals</li>
-        <li>Kept hardware and software inventory records up to date, tracking assets for upgrades, repairs and replacements</li>
-      </ul>
+  <!-- ================= EXPERIENCE + CLUBS ================= -->
+  <section id="experience" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">02 / experience</p>
+        <h2>Experience &amp; Involvement</h2>
+        <p>Where I've worked and the teams I'm part of at ASU.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item club">
+          <div class="tl-head"><h3>Formula SAE — Electric Team <span class="kind club">Club</span></h3><span class="date">Aug 2026 – Present</span></div>
+          <div class="org">Arizona State University · Tempe, AZ</div>
+          <ul>
+            <li>Help collect speed, temperature, RPM and other sensor readings</li>
+            <li>Assist with testing and documenting electrical components</li>
+            <li>Learning about motor controllers, battery monitoring and safety systems</li>
+          </ul>
+        </div>
+
+        <div class="tl-item club">
+          <div class="tl-head"><h3>VSA — Event Coordinator Intern <span class="kind club">Club</span></h3><span class="date">Oct 2026 – Present</span></div>
+          <div class="org">Arizona State University · Tempe, AZ</div>
+          <ul>
+            <li>Assist with planning and coordinating student events, including logistics and event-day operations</li>
+            <li>Collaborate with team members to coordinate activities and communicate event details</li>
+            <li>Support event preparation, problem-solving and time management while adapting to changing needs</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head"><h3>CTE IT Intern <span class="kind work">Work</span></h3><span class="date">Jan 2026 – May 2026</span></div>
+          <div class="org">Peoria Unified School District · Peoria, AZ</div>
+          <ul>
+            <li>Set up, imaged and deployed laptops, desktops and Chromebooks, including OS installs, software setup and user account configuration</li>
+            <li>Helped maintain network infrastructure by fixing connection problems, managing cabling and setting up printers and peripherals</li>
+            <li>Kept hardware and software inventory records up to date, tracking assets for upgrades, repairs and replacements</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ================= EDUCATION + SKILLS ================= -->
   <section id="education">
-    <h2>Education</h2>
-    <div class="item">
-      <div class="item-head"><h3>Arizona State University</h3><span class="meta">Aug. 2026 – May 2030</span></div>
-      <div class="sub">Bachelor of Science in Electrical Engineering · Tempe, AZ</div>
-    </div>
-    <div class="item">
-      <div class="item-head"><h3>Centennial High School</h3><span class="meta">Aug. 2022 – May 2026</span></div>
-      <div class="sub">High School Diploma · Peoria, AZ</div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">03 / background</p>
+        <h2>Education &amp; Skills</h2>
+      </div>
+
+      <div class="edu-skills">
+        <div class="panel">
+          <h3 class="panel-title">Education</h3>
+          <div class="edu">
+            <h4>Arizona State University</h4>
+            <div class="sub">B.S. Electrical Engineering · Tempe, AZ</div>
+            <div class="date">Aug 2026 – May 2030</div>
+          </div>
+          <div class="edu">
+            <h4>Centennial High School</h4>
+            <div class="sub">High School Diploma · Peoria, AZ</div>
+            <div class="date">Aug 2022 – May 2026</div>
+          </div>
+          <div class="edu">
+            <h4>C++ Entry Level Certificate</h4>
+            <div class="sub">Microsoft · STL, multithreading, memory management</div>
+            <div class="date">Sept 2026 – Oct 2026</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel-title">Technical Skills</h3>
+          <div class="skill-group"><div class="label">Languages</div><div class="chips"><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span></div></div>
+          <div class="skill-group"><div class="label">Hardware</div><div class="chips"><span class="chip">Teensy 4.0</span><span class="chip">Arduino</span><span class="chip">MOSFET drivers</span><span class="chip">Solenoids</span><span class="chip">Servos</span><span class="chip">Logic analyzer</span></div></div>
+          <div class="skill-group"><div class="label">Frameworks &amp; Libraries</div><div class="chips"><span class="chip">React</span><span class="chip">PlatformIO</span><span class="chip">pySerial</span></div></div>
+          <div class="skill-group"><div class="label">Tools</div><div class="chips"><span class="chip">Git</span><span class="chip">VS Code</span><span class="chip">Visual Studio</span><span class="chip">PyCharm</span><span class="chip">Google Cloud</span></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="clubs">
-    <h2>Clubs &amp; Activities</h2>
-    <div class="item">
-      <div class="item-head"><h3>Formula SAE — Electric Team</h3><span class="meta">Aug. 2026 – Present</span></div>
-      <div class="sub">Arizona State University · Tempe, AZ</div>
-      <ul>
-        <li>Help collect speed, temperature, RPM and other sensor readings</li>
-        <li>Assist with testing and documenting electrical components</li>
-        <li>Learning about motor controllers, battery monitoring and safety systems</li>
-      </ul>
-    </div>
-    <div class="item">
-      <div class="item-head"><h3>VSA — Event Coordinator Intern</h3><span class="meta">Oct. 2026 – Present</span></div>
-      <div class="sub">Arizona State University · Tempe, AZ</div>
-      <ul>
-        <li>Assist with planning and coordinating student events, including logistics and event-day operations</li>
-        <li>Collaborate with team members to coordinate activities, communicate event details and keep things running smoothly</li>
-        <li>Support event preparation, problem-solving and time management while adapting to changing needs</li>
-      </ul>
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" style="padding-top:24px">
+    <div class="wrap">
+      <div class="contact-card">
+        <h2>Let's build something.</h2>
+        <p>I'm looking for internships and research opportunities in electrical and embedded engineering. The best way to reach me is by email.</p>
+        <div class="links">
+          <a class="btn primary" href="mailto:ericho2@asu.edu">ericho2@asu.edu</a>
+          <a class="btn" href="https://linkedin.com/in/eric-ho-8888b2319" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/ericho235" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </div>
   </section>
-
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="item">
-      <div class="item-head"><h3>C++ Entry Level Certificate — Microsoft</h3><span class="meta">Sept. 2026 – Oct. 2026</span></div>
-      <ul>
-        <li>Write, debug and compile C++ programs and apply core programming principles</li>
-        <li>Implement advanced features such as the STL, multithreading and memory management</li>
-        <li>Use GenAI tools to support coding, reviewing and documenting applications</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <dl class="skills">
-      <dt>Languages</dt><dd>Python, C/C++, JavaScript, HTML/CSS</dd>
-      <dt>Frameworks</dt><dd>React, Arduino, PlatformIO</dd>
-      <dt>Developer Tools</dt><dd>Git, Google Cloud Platform, VS Code, Visual Studio, PyCharm</dd>
-      <dt>Libraries</dt><dd>pySerial</dd>
-      <dt>Hardware</dt><dd>Teensy 4.0, Arduino, MOSFET driver circuits, solenoids, servos, logic analyzer</dd>
-    </dl>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>I'm looking for internships and research opportunities in electrical and embedded engineering. The best way to reach me is by email.</p>
-    <div class="links">
-      <a class="btn primary" href="mailto:ericho2@asu.edu">ericho2@asu.edu</a>
-      <a class="btn" href="https://linkedin.com/in/eric-ho-8888b2319" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/ericho235" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
-
 </main>
 
 <footer>
-  <div class="wrap">© <span id="yr">2026</span> Eric Ho</div>
+  <div class="wrap"><span>© <span id="yr">2026</span> Eric Ho</span><span>Built by hand · hosted on GitHub Pages</span></div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Rotating "I'm a ..." line — edit the phrases here
+  const roles = ["an Electrical Engineering student", "an embedded systems tinkerer", "a robot builder", "on the Formula SAE electric team"];
+  const el = document.getElementById('typed');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let i = 0, j = roles[0].length, deleting = true;
+    setTimeout(function tick() {
+      const word = roles[i];
+      j += deleting ? -1 : 1;
+      el.textContent = word.slice(0, j);
+      let delay = deleting ? 35 : 70;
+      if (deleting && j === 0) { deleting = false; i = (i + 1) % roles.length; delay = 300; }
+      else if (!deleting && j === roles[i].length) { deleting = true; delay = 2000; }
+      setTimeout(tick, delay);
+    }, 2200);
+  }
+</script>
 </body>
 </html>
